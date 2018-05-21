@@ -1,0 +1,40 @@
+{
+  "name": "VoyageEstimator",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@mapbox/react-native-mapbox-gl": "^6.1.1",
+    "antd-mobile": "^2.1.8",
+    "axios": "^0.18.0",
+    "bmo-mobile-components": "http://nexus.pm.bwoilmarine.com/repository/npm_hosted/bmo-mobile-components/-/bmo-mobile-components-1.0.8.tgz",
+    "crypto-js": "^3.1.9-1",
+    "mobx": "^4.1.1",
+    "mobx-react": "^5.0.0",
+    "moment": "^2.22.0",
+    "react": "16.3.1",
+    "react-dom": "^16.2.0",
+    "react-native": "0.55.3",
+    "react-native-elements": "^1.0.0-beta4",
+    "react-native-keyboard-aware-scroll-view": "^0.5.0",
+    "react-native-scrollable-tab-view": "^0.8.0",
+    "react-native-vector-icons": "^4.6.0",
+    "react-navigation": "^1.5.11",
+    "rn-sliding-up-panel": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-jest": "22.4.3",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-react-native": "4.0.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "22.4.3",
+    "react-test-renderer": "16.3.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

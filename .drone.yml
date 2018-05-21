@@ -1,0 +1,47 @@
+clone:
+  git:
+    image: plugins/git:1.4.0
+    skip_verify: true
+pipeline:    
+  scp:
+    image: registry.pm.bwoilmarine.com/bmo/drone-scp:1.0.0
+    host: 192.168.64.97
+    port: 22
+    username: admin
+    target: ~/release/${DRONE_REPO_NAME}
+    rm: true
+    secrets: [ ssh_password ]
+    source:
+      - ./*   
+    when:
+      event: tag      
+  ssh:
+    image: registry.pm.bwoilmarine.com/bmo/drone-ssh:1.0.0
+    host: 192.168.64.97 
+    username: admin
+    port: 22
+    secrets: [ ssh_password ]
+    script:
+#      - hostname
+#      - cd ~/release/${DRONE_REPO_NAME}
+#      - npm install --save react-native@latest
+      - cd ~/release/scripts
+      - ./build_app.sh  ${DRONE_REPO_NAME}
+    when:
+      event: tag 
+  notify:
+    image: registry.pm.bwoilmarine.com/bmo/drone-email:1.0.1
+    recipients: [ hninhtetaung@bwoil.com]
+    recipients_only: true
+    subject: >
+      [{{ build.status }}]
+      {{ repo.owner }}/{{ repo.name }}
+      ({{ build.branch }} - {{ truncate build.commit 8 }})
+    body: >
+      {{#success build.status}}
+        {{ build.author }}Job finished successfully.
+      {{else}}
+        {{ build.author }} broke the build.
+      {{/success}} 
+    when:
+      status: [ success, failure ]

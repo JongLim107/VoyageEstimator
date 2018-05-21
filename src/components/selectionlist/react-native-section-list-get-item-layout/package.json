@@ -1,0 +1,48 @@
+{
+  "_from": "react-native-section-list-get-item-layout",
+  "_id": "react-native-section-list-get-item-layout@2.2.2",
+  "_inBundle": false,
+  "_integrity": "sha512-kR6s97ubi1QevRWRC8RQ26NoD6EgLt36caY25GKBt9eZ+l9Qmm2JHti2cEK153cxLIMbD04Xv4+LjDhcNjxh/w==",
+  "_location": "/react-native-section-list-get-item-layout",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-native-section-list-get-item-layout",
+    "name": "react-native-section-list-get-item-layout",
+    "escapedName": "react-native-section-list-get-item-layout",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-section-list-get-item-layout/-/react-native-section-list-get-item-layout-2.2.2.tgz",
+  "_shasum": "567bf9b51c97020787c45ffe73e57eb25dd8b466",
+  "_spec": "react-native-section-list-get-item-layout",
+  "_where": "/Users/anya/bmo-mobile-components",
+  "author": {
+    "name": "Jan Soendermann",
+    "email": "jan.soendermann+npm@gmail.com"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "This package simplifies constructing the getItemLayout prop for react native SectionLists.",
+  "devDependencies": {
+    "jest": "^22.4.2",
+    "typescript": "^2.7.2"
+  },
+  "license": "Apache-2.0",
+  "main": "./dist/index.js",
+  "name": "react-native-section-list-get-item-layout",
+  "scripts": {
+    "prepublish": "npm run ts:build",
+    "test": "jest",
+    "ts:build": "tsc",
+    "ts:watch": "tsc --watch"
+  },
+  "typings": "./dist/index.d.ts",
+  "version": "2.2.2"
+}
