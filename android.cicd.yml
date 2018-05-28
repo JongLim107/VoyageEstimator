@@ -1,7 +1,7 @@
 ---
 APP_NAME: 'TCE'
 APP_VERSION: '1.0'
-APP_BUNDLE_ID: com.brightoilmarine.tce
+APP_BUNDLE_ID: com.jonglim.voyagetools
 APP_CERT_LOC: android/app
 APP_GRADLE_LOC: android
 APP_APK_LOC: android/app/build/outputs/apk

@@ -1,4 +1,4 @@
-package com.voyageestimator;
+package com.jonglim.voyagetools;
 
 import android.app.Application;
 
@@ -9,6 +9,7 @@ import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 
 import com.mapbox.rctmgl.RCTMGLPackage;
+import com.jonglim.voyagetools.BuildConfig;
 
 import java.util.Arrays;
 import java.util.List;
