@@ -86,9 +86,36 @@ if the cmd above does not working try below one
 ### DELETE THE FORDER ** windows system cmd **
 `rd /s /q "path" `
 
+# Publish to NPM
 ## [Configuring Your .npmrc for an Optimal Node.js Environment](http://nodesource.com/blog/configuring-your-npmrc-for-an-optimal-node-js-environment/)
 [NPM Config set registry](https://registry.npmjs.com/)
 
+[Our private NPM 'npm_group'](http://nexus.pm.bwoilmarine.com/repository/npm_group/)
+
+[Publish packages to 'npm_hosted'](http://nexus.pm.bwoilmarine.com/repository/npm_hosted/)
+
+Add the following code to package.json
+```js
+{
+    "publishConfig" : {
+        "registry" : "http://nexus.pm.bwoilmarine.com/repository/npm_hosted/"
+    }
+}
+```
+
+Use NPM Registry Manager nrm to fast switch between different registries: npm, cnpm, nj, taobao
+
+`npm install -g nrm`
+`nrm add bmonpm http://nexus.pm.bwoilmarine.com/repository/npm_group/`
+`nrm use bmonpm`
+
+## To publish a package
+`npm login --registry http://nexus.pm.bwoilmarine.com/repository/npm_hosted/`
+Username: admin
+Password: admin123
+Email: (this IS public) **your email**
+
+`npm publish`
 
 ## Intsall Mapbox for React Native
 `npm i @mapbox/react-native-mapbox-gl --save`
