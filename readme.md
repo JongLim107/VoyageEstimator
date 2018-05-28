@@ -1,4 +1,4 @@
-# BMO app with react-native
+# VoyageTools with react-native
 
 ## Project tructure
 
