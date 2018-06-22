@@ -31,51 +31,49 @@
 ## Windows: Setup development enviorenment
 install node.js_latest_version / vscode_latest_version / python_version_2.7 / ms_build_tool_2015_full_package
 
-
-## Plugins
-please refer to './package.json'
-
-## Install rnpm for link RN library to Native code
+#### Install rnpm for link RN library to Native code
 `npm install rnpm -g`
 
 Use like this `rnpm link react-native-vector-icons`
-
 or `rnpm unlink react-native-vector-icons`
-
 and the tool will auto link react-native library to android native build config.
 
 
-## After clone the project, run this to install dependencies library
+## Running the Project 
+After clone the project, run below cmd to install dependencies library
 `npm install` or `yarn`
 
-### start node.service manually, if use expo. no need this cmd
+#### Dependencies library 
+please refer to './package.json'
+
+#### start node.service manually, if use expo. no need this cmd
 `npm start` or `npm start -- --reset-cache`
 if the cmd above does not working try this `react-native start` or `react-native start -- --reset-cache`
 
-### build ***android*** app
+#### build ***android*** app
 `react-native run-android`
 `react-native log-android`
 
 
-### Android ADB Shell 
+#### Android ADB Shell 
 `adb devices`
 `adb reverse tcp:8081 tcp:8081`
 `adb logcat *:S ReactNative:V ReactNativeJS:V`
 
-### Reload RN **android**
+#### Reload RN **android**
 `adb shell input keyevent R R R`
 
-### MENU_BUTTON **android**
+#### MENU_BUTTON **android**
 `adb shell input keyevent 82`
 
-### DELETE THE FORDER ** windows system cmd **
+#### DELETE THE FORDER ** windows system cmd **
 `rd /s /q "path" `
 
 
 ## Enabling decorator syntax
 [Enabling decorator syntax](https://mobx.js.org/best/decorators.html)
 
-### TypeScript
+#### TypeScript
 
 Enable the compiler option "experimentalDecorators": true in your tsconfig.json.
 ```js
@@ -96,11 +94,11 @@ And enable it in your .babelrc file:
 ```
 
 ## Addiction 
-### Install React -- Specify the version
+#### Install React -- Specify the version
 `npm install --save react@^16.3.0`
 `npm install --save react-native@X.Y`
 
-### Intsall Mapbox for React Native
+#### Intsall Mapbox for React Native
 `npm i @mapbox/react-native-mapbox-gl --save`
 or
 `yarn add @mapbox/react-native-mapbox-gl`
@@ -108,10 +106,10 @@ or
 
 
 ## ISSUE and Configuration
-### NPM Upgrade
+#### NPM Upgrade
 `npm i -g npm-upgrade`
 
-### [Configuring Your .npmrc for an Optimal Node.js Environment](http://nodesource.com/blog/configuring-your-npmrc-for-an-optimal-node-js-environment/)
+#### [Configuring Your .npmrc for an Optimal Node.js Environment](http://nodesource.com/blog/configuring-your-npmrc-for-an-optimal-node-js-environment/)
 [NPM Config set registry](https://registry.npmjs.com/)
 `npm cache clean --force` && `yarn cache clean`
 `npm config set registry https://registry.npmjs.org/`
@@ -119,7 +117,7 @@ or
 `nrm use npm`
 
 
-### Brightoil Marine Online Registry
+#### Brightoil Marine Online Registry
 `nrm add bmonpm http://nexus.pm.bwoilmarine.com/repository/npm_group/`
 `nrm use bmonpm`
 #### BMO config account
