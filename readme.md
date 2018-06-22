@@ -46,35 +46,20 @@ and the tool will auto link react-native library to android native build config.
 
 
 ## After clone the project, run this to install dependencies library
-`npm install`
-
+`npm install` or `yarn`
 
 ### start node.service manually, if use expo. no need this cmd
-`npm start`
-
-`npm start -- --reset-cache`
-
-if the cmd above does not working try below one
-
-`react-native start`
-
-`react-native start -- --reset-cache`
+`npm start` or `npm start -- --reset-cache`
+if the cmd above does not working try this `react-native start` or `react-native start -- --reset-cache`
 
 ### build ***android*** app
 `react-native run-android`
-
 `react-native log-android`
-
-
-### this is for observer library
-`npm install mobx-react --save`
 
 
 ### Android ADB Shell 
 `adb devices`
-
 `adb reverse tcp:8081 tcp:8081`
-
 `adb logcat *:S ReactNative:V ReactNativeJS:V`
 
 ### Reload RN **android**
@@ -86,47 +71,11 @@ if the cmd above does not working try below one
 ### DELETE THE FORDER ** windows system cmd **
 `rd /s /q "path" `
 
-# Publish to NPM
-## [Configuring Your .npmrc for an Optimal Node.js Environment](http://nodesource.com/blog/configuring-your-npmrc-for-an-optimal-node-js-environment/)
-[NPM Config set registry](https://registry.npmjs.com/)
-
-[Our private NPM 'npm_group'](http://nexus.pm.bwoilmarine.com/repository/npm_group/)
-
-[Publish packages to 'npm_hosted'](http://nexus.pm.bwoilmarine.com/repository/npm_hosted/)
-
-Add the following code to package.json
-```js
-{
-    "publishConfig" : {
-        "registry" : "http://nexus.pm.bwoilmarine.com/repository/npm_hosted/"
-    }
-}
-```
-
-Use NPM Registry Manager nrm to fast switch between different registries: npm, cnpm, nj, taobao
-
-`npm install -g nrm`
-`nrm add bmonpm http://nexus.pm.bwoilmarine.com/repository/npm_group/`
-`nrm use bmonpm`
-
-## To publish a package
-`npm login --registry http://nexus.pm.bwoilmarine.com/repository/npm_hosted/`
-Username: admin
-Password: admin123
-Email: (this IS public) **your email**
-
-`npm publish`
-
-## Intsall Mapbox for React Native
-`npm i @mapbox/react-native-mapbox-gl --save`
-#### or
-`yarn add @mapbox/react-native-mapbox-gl`
-
 
 ## Enabling decorator syntax
 [Enabling decorator syntax](https://mobx.js.org/best/decorators.html)
 
-TypeScript
+### TypeScript
 
 Enable the compiler option "experimentalDecorators": true in your tsconfig.json.
 ```js
@@ -146,9 +95,47 @@ And enable it in your .babelrc file:
 { "plugins": ["transform-decorators-legacy"] }
 ```
 
-# Addiction 
-## Install React -- Specify the version
+## Addiction 
+### Install React -- Specify the version
 `npm install --save react@^16.3.0`
-
 `npm install --save react-native@X.Y`
+
+### Intsall Mapbox for React Native
+`npm i @mapbox/react-native-mapbox-gl --save`
+or
+`yarn add @mapbox/react-native-mapbox-gl`
+
+
+
+## ISSUE and Configuration
+### NPM Upgrade
+`npm i -g npm-upgrade`
+
+### [Configuring Your .npmrc for an Optimal Node.js Environment](http://nodesource.com/blog/configuring-your-npmrc-for-an-optimal-node-js-environment/)
+[NPM Config set registry](https://registry.npmjs.com/)
+`npm cache clean --force` && `yarn cache clean`
+`npm config set registry https://registry.npmjs.org/`
+or
+`nrm use npm`
+
+
+### Brightoil Marine Online Registry
+`nrm add bmonpm http://nexus.pm.bwoilmarine.com/repository/npm_group/`
+`nrm use bmonpm`
+#### BMO config account
+`npm login --registry http://nexus.pm.bwoilmarine.com/repository/npm_hosted/`
+```js
+{
+    Username: admin
+    Password: admin123
+    Email: (this IS public) **your email**
+}
+```
+
+
+## Attention
+If your code use A library which is using a Specific version of another B library.
+then you need to install that B library with the correct version before you can install the A library.
+Correct : `npm install --save react@16.3.0`
+Wrong :`npm install --save react@^16.3.0`
 
