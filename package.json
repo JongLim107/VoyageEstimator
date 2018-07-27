@@ -10,7 +10,6 @@
     "@mapbox/react-native-mapbox-gl": "^6.1.1",
     "antd-mobile": "^2.1.8",
     "axios": "^0.18.0",
-    "bmo-mobile-components": "http://nexus.pm.bwoilmarine.com/repository/npm_hosted/bmo-mobile-components/-/bmo-mobile-components-1.0.8.tgz",
     "crypto-js": "^3.1.9-1",
     "mobx": "^4.1.1",
     "mobx-react": "^5.0.0",
